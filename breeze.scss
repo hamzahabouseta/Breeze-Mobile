@@ -1,0 +1,475 @@
+---
+---
+
+
+/* General CSS */
+html
+{
+    font: 12px Comfortaa;
+    margin-top: 0;
+    background-color: #e7e7e7;
+}
+
+/* Links */
+a
+{
+    text-decoration: none;
+}
+
+/* text */
+p
+{
+    line-height: 1.7em;
+    font-size: 1.2em;
+}
+
+/* Nav */
+nav
+{
+    padding: 15px;
+    top: 0;
+    width: 90%;
+    overflow: hidden;
+}
+
+nav ul
+{
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li
+{
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: grey
+}
+nav a:hover
+{
+    color: lightgray
+}
+
+.navcontainer
+{
+    justify-content: left;
+    display: flex;
+}
+
+/* Header */
+.header
+{
+    background-color: #9afbff;
+    background-image: url("data:image/svg+xml,%3Csvg width='320' height='320' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236fcde1' fill-opacity='0.58' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    
+    font-weight: bold;
+}
+
+.headertext
+{
+    color: white;
+    font-size: 8em;
+    text-shadow: 2px 2px gray;
+
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; 
+    user-select: none;
+    pointer-events: none;
+
+    max-width: 90%;
+}
+
+.headerimage
+{
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; 
+    user-select: none;
+    pointer-events: none; 
+}
+
+.pagekit
+{
+    @extend .headerimage;
+    vertical-align: middle;
+
+    max-width: 95%;
+    width: 250px;
+    padding-bottom: 75px;
+}
+
+.windmill
+{
+    @extend .headerimage;
+
+    max-width: 95%;
+
+    padding-bottom: 0;
+    margin-bottom: 0;
+    vertical-align: bottom;
+}
+
+/* horizontal alignment */
+.horizontalcontainer
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.horizontalcell
+{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* centering */
+.centertext
+{
+    text-align: center;
+}
+
+.centerdiv
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Width */
+.miniwidth
+{
+    max-width: 90%; 
+    width: 250px;
+}
+
+.smallwidth
+{
+    max-width: 90%;
+    width: 650px;
+}
+
+.midwidth
+{
+    max-width: 90%; 
+    width: 1000px;
+}
+
+.mostwidth
+{
+    max-width: 90%; 
+    width: 1500px;
+}
+
+.fullwidth
+{
+    max-width: 100%;
+}
+
+/* Impressionables */
+.impressionable
+{
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px 4px rgba(103, 103, 103, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impressionable:hover
+{
+    height: auto;
+    width: 258;
+    transform: scaleY(0.95) scaleX(0.95);
+    box-shadow: 0px 8px 15px 4px rgba(103, 103, 103, 0.05);
+}
+
+.promocell
+{
+    @extend .impressionable;
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 272px;
+    
+    margin: 15px;
+}
+
+.promocell p, .promocell h2
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button
+{
+    @extend .impressionable;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 10px;
+}
+
+.coloredbutton
+{
+    @extend .button;
+}
+
+.coloredbutton p, .coloredbutton h2
+{
+    color: #f0f0f0;
+}
+
+/* Titled cells */
+.titledcell
+{
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.titledcellcontent
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.titledcellheader
+{
+    @extend .titledcellcontent;
+    font-weight:bold;
+    font-size:120%;
+    background-color: #f0f0f0;
+}
+
+.titledcellbody
+{
+    @extend .titledcellcontent;
+    background-color: white;
+}
+
+/* Promo text */
+.promotextcell
+{
+    max-width: 400px;
+    padding: 30px;
+}
+
+/* Text alignment */
+.lefttext
+{
+    text-align: left;
+}
+
+.righttext
+{
+    text-align: right;
+}
+
+/* Vertical Alignment */
+.aligntop
+{
+    vertical-align: top;
+}
+
+.alignbase
+{
+    vertical-align: baseline;
+}
+
+/* spacing */
+.spacing
+{
+    padding: 30px;
+}
+
+.halfspacing
+{
+    padding: 15px;
+}
+
+.reversespacing
+{
+    margin: -30px;
+}
+
+
+/* fonts */
+@font-face 
+{
+    font-family: Comfortaa;
+    src: url(fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face 
+{
+    font-family: Comfortaa;
+    src: url(fonts/Comfortaa-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face 
+{
+    font-family: Comfortaa;
+    src: url(fonts/Comfortaa-Light.ttf);
+    font-weight: lighter;
+}
+
+/* screen size difference stuff for nav */
+.navcontainer .icon 
+{
+    display: none;
+}
+
+@media screen and (min-width: 721px)
+{
+    nav ul li
+    {
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    .mobileonly
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) 
+{
+    nav 
+    {
+        position: relative;
+        top: -10px;
+        left: -10px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li
+    {
+        font-size: 1.5em;
+    }
+
+    nav .icon
+    {
+        font-size: 2.5em;
+    }
+
+    nav ul li 
+    {
+        margin: 30px;
+    }
+
+    .navcontainer a {display: none;}
+    .navcontainer a.icon {
+      display: block;
+    }
+
+    .headertext
+    {
+        font-size: 7em;
+    }
+
+    .desktoponly
+    {
+        display: none;
+    }
+}
+  
+@media screen and (max-width: 720px) 
+{
+    .navcontainer.responsive {position: relative;}
+    .navcontainer.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+
+
+
+/* PAGE SPECIFIC CSS GOES BELOW HERE */
+
+/* FAQ */
+.faqpad
+{
+    padding: 3px;
+}
+
+/* Pricing */
+.pricingcell
+{
+    @extend .titledcell;
+    width: 272px;
+}
+
+.pricingcellheader
+{
+    @extend .titledcellheader;
+}
+
+.pricingcell p, .pricingcell h2
+{
+    text-align: center;
+}
+
+.pricingcellbody
+{
+    @extend .titledcellbody;
+}
+
+.pricingcellbody p, .pricingcell h2
+{
+    text-align: center;
+}
+
+/* About */
+.aboutcell
+{
+    @extend .titledcell;
+
+    width: 272px;
+    height: 100%;
+}
+
+.aboutcellname
+{
+    @extend .titledcellcontent;
+
+    font-weight:bold;
+    font-size:120%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.aboutcellbody
+{
+    @extend .titledcellbody;
+    text-align: center;
+}
+
+.abouthorizontalcell
+{
+    @extend .horizontalcell;
+
+    vertical-align: top;
+}
+
+.profilepicture
+{
+    border-radius: 50%;
+    width: 33%;
+    margin: 15px;
+}
